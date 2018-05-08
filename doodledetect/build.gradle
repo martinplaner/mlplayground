@@ -1,0 +1,23 @@
+group 'me.planer'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "me.planer.mlplayground.doodledetect.Main"
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.processing/core
+    compile group: 'org.processing', name: 'core', version: '3.3.7'
+
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: '1.0.0-alpha'
+    compile group: 'org.deeplearning4j', name: 'deeplearning4j-modelimport', version: '1.0.0-alpha'
+    compile group: 'org.nd4j', name: 'nd4j-native-platform', version: '1.0.0-alpha'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
